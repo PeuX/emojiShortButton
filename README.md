@@ -4,4 +4,4 @@ You can use it in your webpage or in a button.
 
 You can add emoji in the EmoJ array ;)
 
-ONLY TESTED IN CHROME!!!
+NOT TESTED ON IE...
