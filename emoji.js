@@ -3,7 +3,7 @@ window.addEventListener('load',function(){
 
 
     sheet = document.createElement('style');
-    sheet.innerHTML = "div.EmoJ_div {position: fixed; top: 20px; background: lightgrey; -moz-border-radius: 20px; border-radius: 20px; background-color: #A6A6A6; -moz-box-shadow: #B3B3B3 4px 4px 4px; box-shadow: #B3B3B3 4px 4px 4px; padding: 20px; width: 500px; margin: auto; left: 0; right: 0; z-index: 1000;display: flex;flex-flow: row wrap;} a.EmoJ_emoj{flex: auto;color: black; text-decoration: none; padding: 3px; border: 1px solid black; height: 25px; display: inline-block; margin: 1px;font-size:16px;color:black;}";
+    sheet.innerHTML = "div.EmoJ_div {position: fixed; top: 20px; background: lightgrey; -moz-border-radius: 20px; border-radius: 20px; background-color: #A6A6A6; -moz-box-shadow: #B3B3B3 4px 4px 4px; box-shadow: #B3B3B3 4px 4px 4px; padding: 20px; width: 500px; margin: auto; left: 0; right: 0; z-index: 1000;display: flex;flex-flow: row wrap;} span.EmoJ_block{cursor:pointer;flex: auto;color: black; text-decoration: none; padding: 3px; border: 1px solid black; height: 25px; display: inline-block; margin: 1px;font-size:16px;color:black;}";
     document.body.appendChild(sheet);
 
     function hasClass(element, cls) {
@@ -16,19 +16,18 @@ window.addEventListener('load',function(){
 
     var i=0;
     emoJ.forEach(function(elem){
-        div.innerHTML += '<a href="#" class="EmoJ_emoj" id="EmoJ_id_'+i+'">'+elem+'</a>';
+        div.innerHTML += '<span class="EmoJ_block"><span class="EmoJ_text">'+elem+'</span></span>';
         i++;
     });
 
     function clickEmoJ(evt){
-            if( hasClass(evt.target,'EmoJ_emoj') ){
+            if( hasClass(evt.target,'EmoJ_text') ){
                 var emoj = evt.target;
                 var range = document.createRange();
                 range.selectNode(emoj);
                 window.getSelection().removeAllRanges();
                 window.getSelection().addRange(range);
                 document.execCommand('copy');
-                console.log(2);
                 div.remove();
                 sheet.remove();
                 document.removeEventListener('click',clickEmoJ,false);
