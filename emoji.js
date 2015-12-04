@@ -3,7 +3,7 @@ window.addEventListener('load',function(){
 
 
     sheet = document.createElement('style');
-    sheet.innerHTML = "div.EmoJ_div {position: absolute; top: 20px; background: lightgrey; -moz-border-radius: 20px; border-radius: 20px; background-color: #A6A6A6; -moz-box-shadow: #B3B3B3 4px 4px 4px; box-shadow: #B3B3B3 4px 4px 4px; padding: 20px; width: 500px; margin: auto; left: 0; right: 0; z-index: 1000;display: flex;flex-flow: row wrap;} a.EmoJ_emoj{flex: auto;color: black; text-decoration: none; padding: 3px; border: 1px solid black; height: 25px; display: inline-block; margin: 1px;}";
+    sheet.innerHTML = "div.EmoJ_div {position: fixed; top: 20px; background: lightgrey; -moz-border-radius: 20px; border-radius: 20px; background-color: #A6A6A6; -moz-box-shadow: #B3B3B3 4px 4px 4px; box-shadow: #B3B3B3 4px 4px 4px; padding: 20px; width: 500px; margin: auto; left: 0; right: 0; z-index: 1000;display: flex;flex-flow: row wrap;} a.EmoJ_emoj{flex: auto;color: black; text-decoration: none; padding: 3px; border: 1px solid black; height: 25px; display: inline-block; margin: 1px;font-size:16px;color:black;}";
     document.body.appendChild(sheet);
 
     function hasClass(element, cls) {
