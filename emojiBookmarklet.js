@@ -28,7 +28,6 @@ javascript:(function(){
                 window.getSelection().removeAllRanges();
                 window.getSelection().addRange(range);
                 document.execCommand('copy');
-                console.log(2);
                 div.remove();
                 sheet.remove();
                 document.removeEventListener('click',clickEmoJ,false);
